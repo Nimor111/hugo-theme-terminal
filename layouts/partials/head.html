@@ -35,6 +35,7 @@
     <meta name="twitter:site" content="{{ $.Site.Params.Twitter.site }}" />
   {{ end }}
     <meta name="twitter:creator" content="{{ if .IsHome }}{{ $.Site.Params.Twitter.creator }}{{ else if isset .Params "authortwitter" }}{{ .Params.authorTwitter }}{{ else }}{{ .Params.Author }}{{ end }}" />
+    <meta name="twitter:image" content="{{ if .IsHome }}{{ $.Site.Params.favicon | absURL }}{{else}}{{ .Params.Image | absURL }}{{ end }}"> 
 {{ end }}
 
 <!-- OG data -->
